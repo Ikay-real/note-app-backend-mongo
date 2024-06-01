@@ -1,5 +1,5 @@
 import { Request, Response } from 'express';
-import { User, createUserDB, getUsersDB, getUserByIdDB, updateUserDB, deleteUserDB, deleteAllUsersDB } from '../db/users';
+import { User, createUserDB, getUsersDB, getUserByIdDB, updateUserDB, deleteUserDB, deleteAllUsersDB } from '../utils/users';
 
 export const createUser = async (req: Request, res: Response): Promise<void> => {
   try {
