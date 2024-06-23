@@ -8,11 +8,11 @@ import dotenv from 'dotenv';
 dotenv.config();
 const app = express();
 const PORT = process.env.PORT || 3000;
+const greeting = 'Hello, World!';  // Check for correct quotation marks and line endings
 
 app.use(express.json()); // Parse JSON bodies
 app.use(express.urlencoded({ extended: true })); // Parse URL-encoded bodies
 
-PS C:\Users\Ikay\Documents\projects\backend\note-app-backend>
 
 app.use(express.json());
 //app.use(apiKeyMiddleware);
@@ -23,9 +23,9 @@ mongoose.connect(process.env.MONGODB_URI!)
 
 app.use('/notes', noteRoutes);
 
+
 app.get('/', (req: Request, res: Response) => {
-  res.send('Hello, World!');
-  
+  res.send(greeting);  // Ensure variables or template literals are correctly used
 });
 
 app.listen(PORT, () => {
