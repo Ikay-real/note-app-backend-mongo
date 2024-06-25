@@ -1,6 +1,6 @@
-import { Schema, model } from 'mongoose';
+import { Schema, model, Document } from 'mongoose';
 
-interface INote {
+export interface INote extends Document {
     title: string;
     content: string;
     createdAt: Date;
